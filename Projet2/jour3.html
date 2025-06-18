@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Complet de Stage - 10 Jours d'Apprentissage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .day-section { page-break-inside: avoid; }
+        .exercise-box { border-left: 4px solid #3b82f6; }
+        .solution-box { border-left: 4px solid #10b981; }
+        .warning-box { border-left: 4px solid #f59e0b; }
+        .code-block { background-color: #1f2937; color: #f3f4f6; }
+        .time-slot { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <div class="max-w-6xl mx-auto p-6">
+        
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg mb-8">
+            <h1 class="text-4xl font-bold mb-4">
+                <i class="fas fa-code mr-3"></i>
+                Guide de Stage - 10 Jours d'Apprentissage
+            </h1>
+            <p class="text-xl">Développement Web, Python & Cybersécurité</p>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div class="bg-white bg-opacity-20 p-3 rounded">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    <strong>Durée:</strong> 10 jours
+                </div>
+                <div class="bg-white bg-opacity-20 p-3 rounded">
+                    <i class="fas fa-clock mr-2"></i>
+                    <strong>Par jour:</strong> 5-7h de travail
+                </div>
+                <div class="bg-white bg-opacity-20 p-3 rounded">
+                    <i class="fas fa-user-graduate mr-2"></i>
+                    <strong>Niveau:</strong> Débutant total
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions Générales -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">
+                <i class="fas fa-info-circle mr-2"></i>
+                Instructions Générales
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">📋 Organisation du travail</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Suivre le planning horaire indiqué</li>
+                        <li>• Prendre des pauses de 15 min toutes les 2h</li>
+                        <li>• Noter tes questions dans un carnet</li>
+                        <li>• Sauvegarder ton travail régulièrement</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">🛠️ Outils nécessaires</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• <strong>Navigateur:</strong> Chrome ou Firefox</li>
+                        <li>• <strong>Éditeur:</strong> Visual Studio Code</li>
+                        <li>• <strong>Terminal:</strong> Intégré à VS Code</li>
+                        <li>• <strong>Compte GitHub</strong> (à créer jour 5)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOUR 3 -->
+        <div class="day-section bg-white p-6 rounded-lg shadow-md mb-8">
+            <div class="flex items-center mb-6">
+                <div class="bg-yellow-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4">3</div>
+                <div>
+                    <h2 class="text-3xl font-bold text-yellow-600">Jour 3 - JavaScript : Rendre tes Pages Interactives</h2>
+                    <p class="text-gray-600">Ajouter de l'interactivité et de la logique à tes sites web</p>
+                </div>
+            </div>
+
+            <!-- Planning Jour 3 -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-3">📅 Planning de la journée (6h)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div class="time-slot text-white p-3 rounded text-center">
+                        <div class="font-bold">9h00-10h30</div>
+                        <div class="text-sm">JS Bases & Variables</div>
+                    </div>
+                    <div class="time-slot text-white p-3 rounded text-center">
+                        <div class="font-bold">10h45-12h00</div>
+                        <div class="text-sm">Fonctions & Événements</div>
+                    </div>
+                    <div class="time-slot text-white p-3 rounded text-center">
+                        <div class="font-bold">14h00-15h30</div>
+                        <div class="text-sm">DOM & Interactivité</div>
+                    </div>
+                    <div class="time-slot text-white p-3 rounded text-center">
+                        <div class="font-bold">15h45-17h15</div>
+                        <div class="text-sm">Mini-Projets JS</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Théorie JavaScript -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-3">⚡ Qu'est-ce que JavaScript ?</h3>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="mb-3"><strong>JavaScript</strong> est le langage qui donne vie à tes pages web. Si HTML est le squelette et CSS la décoration, JavaScript est le <strong>cerveau</strong> qui permet l'interactivité.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div class="bg-blue-50 p-4 rounded">
+                            <h4 class="font-semibold mb-2">🎯 JavaScript peut :</h4>
+                            <ul class="text-sm space-y-1">
+                                <li>• Réagir aux clics, survols, touches</li>
+                                <li>• Modifier le contenu de la page</li>
+                                <li>• Calculer et traiter des données</li>
+                                <li>• Créer des animations</li>
+                                <li>• Communiquer avec des serveurs</li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded">
+                            <h4 class="font-semibold mb-2">📝 Premier script :</h4>
+                            <div class="code-block p-3 rounded">
+<pre class="text-sm">
+&lt;script&gt;
+  alert("Hello World!");
+  console.log("Je débute en JS");
+&lt;/script&gt;
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Variables et types -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-3">📦 Variables et Types de Données</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-green-50 p-4 rounded">
+                        <h4 class="font-semibold mb-2">Déclarer des variables</h4>
+                        <div class="code-block p-3 rounded">
+<pre class="text-sm">
+// Variables
+let pseudo = "GameMaster";
+let age = 15;
+let estEnLigne = true;
+
+// Constantes
+const maxJoueurs = 10;
+const PI = 3.14159;
+</pre>
+                        </div>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded">
+                        <h4 class="font-semibold mb-2">Types de données</h4>
+                        <ul class="text-sm space-y-1">
+                            <li><code>String</code> - Texte : "Bonjour"</li>
+                            <li><code>Number</code> - Nombre : 42, 3.14</li>
+                            <li><code>Boolean</code> - Vrai/Faux : true, false</li>
+                            <li><code>Array</code> - Liste : [1, 2, 3]</li>
+                            <li><code>Object</code> - Objet : {nom: "Alex"}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exercices Jour 3 -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-3">💻 Exercices du Jour 3</h3>
+                
+                <!-- Exercice 1 -->
+                <div class="exercise-box bg-blue-50 p-4 rounded-lg mb-4">
+                    <h4 class="font-bold text-blue-700 mb-2">📝 Exercice 1 - Variables Gaming (25 min)</h4>
+                    <p class="mb-3">Crée <code>gaming-stats.html</code> pour gérer des statistiques de jeu.</p>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-500">
+                        <p><strong>Consignes :</strong></p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Crée des variables pour : pseudo, niveau, points, victoires</li>
+                            <li>Calcule le ratio victoires/parties</li>
+                            <li>Affiche un message de rang selon le niveau</li>
+                            <li>Utilise <code>console.log()</code> pour afficher les résultats</li>
+                            <li>Ouvre la console du navigateur (F12) pour voir les résultats</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exercice 2 -->
+                <div class="exercise-box bg-blue-50 p-4 rounded-lg mb-4">
+                    <h4 class="font-bold text-blue-700 mb-2">📝 Exercice 2 - Premiers Événements (30 min)</h4>
+                    <p class="mb-3">Crée <code>clicker-game.html</code> - Un mini-jeu de clics.</p>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-500">
+                        <p><strong>Consignes :</strong></p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Un bouton "Cliquer !" qui compte les clics</li>
+                            <li>Affiche le nombre de clics en temps réel</li>
+                            <li>Bouton "Reset" pour remettre à zéro</li>
+                            <li>Message qui change selon le nombre de clics</li>
+                            <li>Change la couleur du bouton après 10 clics</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box bg-yellow-50 p-3 rounded border-l-4 border-yellow-500 mt-3">
+                        <p><strong>💡 Nouveaux concepts :</strong></p>
+                        <ul class="list-disc ml-6">
+                            <li><code>document.getElementById("id")</code> - Sélectionner un élément</li>
+                            <li><code>onclick = function() { ... }</code> - Gérer les clics</li>
+                            <li><code>innerHTML</code> - Modifier le contenu</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exercice 3 -->
+                <div class="exercise-box bg-blue-50 p-4 rounded-lg mb-4">
+                    <h4 class="font-bold text-blue-700 mb-2">📝 Exercice 3 - Manipulation du DOM (35 min)</h4>
+                    <p class="mb-3">Crée <code>gaming-profile.html</code> - Un profil de joueur interactif.</p>
+                    <div class="bg-white p-3 rounded border-l-4 border-blue-500">
+                        <p><strong>Consignes :</strong></p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Formulaire pour entrer : pseudo, jeu préféré, plateforme</li>
+                            <li>Bouton "Créer Profil" qui génère un profil stylé</li>
+                            <li>Le profil s'affiche avec les infos + avatar généré</li>
+                            <li>Bouton "Changer Avatar" qui change l'image</li>
+                            <li>Bouton "Mode Sombre" qui change le thème</li>
+                        </ul>
+                    </div>
+                </div>
+
+            <!-- Mini-Projets JS -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-3">🎯 Mini-Projets JavaScript (1h30)</h3>
+                <div class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white p-6 rounded-lg">
+                    <h4 class="text-xl font-bold mb-3">⚡ Réalise 2 mini-projets au choix</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-white bg-opacity-20 p-4 rounded">
+                            <h5 class="font-bold mb-2">🎲 Projet A : Dé Gaming</h5>
+                            <ul class="text-sm space-y-1">
+                                <li>• Simulation de lancé de dé pour RPG</li>
+                                <li>• Boutons pour différents dés (d6, d10, d20)</li>
+                                <li>• Historique des lancers</li>
+                                <li>• Calcul de statistiques</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-4 rounded">
+                            <h5 class="font-bold mb-2">🧮 Projet B : Calculatrice de Score</h5>
+                            <ul class="text-sm space-y-1">
+                                <li>• Calculer des scores de jeu</li>
+                                <li>• Plusieurs joueurs</li>
+                                <li>• Classement automatique</li>
+                                <li>• Sauvegarde des parties</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-20 p-4 rounded">
+                        <p><strong>💡 Conseil :</strong> Choisis le projet qui t'intéresse le plus et prends ton temps pour bien comprendre chaque ligne de code que tu écris.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Game profil creator</title>
+    <link rel="stylesheet" href="GameProfile.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Gaming profil creator  !</h1>
+        <div class="game-section">
+            <div class="input-group">
+                <label for="pseudo">ton pseudo:</label>  
+                <input type="text" id="pseudo" placeholder="ex:Tartanpidon">
+                
+            </div>
+             <div class="input-group">
+                <label for="favGame">Jeu préferé:</label>  
+                <input type="text" id="favGame" placeholder="ex:Tetris">
+                
+            </div>
+             <div class="input-group">
+                <label for="platform">Plateforme Principale:</label>  
+                <select name="platform" id="platform">
+                    <option value="">Choisir...</option>
+                    <option value="Pc">Pc</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="Ps4">Ps4</option>
+                    <option value="Ps5">Ps5</option>
+                    <option value="Android">Android</option>
+                    <option value="Switch">Switch</option>
+                    <option value="Ios">Ios</option>
+                </select>
+                
+            </div>
+            <button onclick="createProfile()">créer mon profil</button>
+            <button onclick="modeDark()">mode sombre</button>
+        </div>
+        <div id="profileCard" class="profile-card">
+            <img src="" alt="Avatar" id="avatar" class="avatar">
+            <h2 id="displayPseudo"></h2>
+            <p id="displayGame"></p>
+            <p id="displayPlatform"></p>
+            <p>🔥 Membre depuis <span id="joinDate"></span></p>
+            <button onclick="changeAvatar()">Changer Avatar</button>
+
+        </div>
+
+    </div>
+    <script>
+        // Variable Globale
+        let avatarIndex=0;
+        const avatars=[
+            "img/pablo.jpg",
+            "img/nike.jpg",
+            "img/Nathalie.jpg",
+            "img/Lenny.jpg",
+            "img/Jardine.jpg",
+            "img/julie.jpg"
+        ];
+
+        // Fonction pour créer le profil 
+        function createProfile(){
+
+            //Récupuration des infos User 
+            const pseudo=document.getElementById("pseudo").value;
+            const favGame=document.getElementById("favGame").value;
+            const platform=document.getElementById("platform").value;
+            const profileCard=document.getElementById("profileCard");
+            const avatar=document.getElementById("avatar");
+            // Vérif que les champs sont biens remplis.
+            if(!pseudo || !favGame || !platform){
+                alert("merci de remplir tout les champs");
+                return;
+            
+            }
+
+            // Afficher le profil
+            profileCard.style.display="block";
+            
+            // Remplir les informations 
+            document.getElementById("displayPseudo").innerHTML=pseudo;
+            document.getElementById("displayGame").innerHTML=favGame;
+            document.getElementById("displayPlatform").innerHTML=platform;
+            document.getElementById("joinDate").innerHTML=new Date().toLocaleDateString();
+
+             // Avatar par défault
+            avatar.src=avatars[0];
+            avatarIndex=0;
+
+             //Animation d'apparition
+            profileCard.style.opacity="0";
+            profileCard.style.transform="translateY(20px)";
+             setTimeout(function() {
+                profileCard.style.transition="all 0.5s"
+                profileCard.style.opacity="1";
+                profileCard.style.transform="translateY(0px)"; 
+            },100);            
+        }
+        function changeAvatar(){
+            avatarIndex=(avatarIndex+1) % avatars.length;
+            avatar.src=avatars[avatarIndex];
+
+            //Animation de changement
+            avatar.style.transform="scale(0.8) rotate(180deg)";
+            setTimeout(function() {
+                avatar.style.transition="all 1s"
+                avatar.style.transform="scale(1) rotate(0deg)";
+            },200);
+        }
+
+        function modeDark(){
+            document.body.classList.toggle("darkmode");
+                
+            const button=event.target;
+            if(document.body.classList.contains("darkmode")){
+                button.innerHTML="mode clair";
+            }
+            else{
+                button.innerHTML="mode sombre"
+            }
+
+        }
+
+    
+    
+
+        
+
+
+    </script>
+
+</body>
+</html>

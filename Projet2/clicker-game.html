@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Clicker game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>ClickerGame</h1>
+        <div id="counter">Clicks: 0</div>
+        <div id="message">Commence a cliquer</div>
+        <button id="clickButton">Cliquer!</button>
+        <button id="resetButton">Reset</button>
+    </div>
+    <script>
+        // Variable globale
+        let clicks=0;
+        // Récupération des éléments
+        const counter=document.getElementById("counter");
+        const message=document.getElementById("message");
+        const clickButton=document.getElementById("clickButton");
+        const resetButton=document.getElementById("resetButton");
+        // Fonction d'affichage
+        function updateDisplay(msg1,msg2){
+            counter.innerHTML="Clicks: "+ clicks;
+            // Message selon le nombres de cliques
+            if(clicks===0){
+                message.innerHTML="👆 Commence a cliquer";
+            }
+            else if(clicks<5){
+                message.innerHTML="👏 Bien joué continue !";
+            }
+            else if(clicks<10){
+                message.innerHTML="🤝 Tu prends le rythme !";
+            }
+
+            else if(clicks<25){
+                message.innerHTML="💪 Excellent !! T'es un pro!!!";
+            }
+            else if(clicks<50){
+                message.innerHTML="🕺 Incroyable, tu es inarrêtable !!";
+            }
+            else{
+                message.innerHTML="👑 LEGENDE !!!! Tu as cassé le jeu!!!!";
+            }
+
+            // Changer la couleur du boutton apres dix cliques.
+            if(clicks>=10){
+                clickButton.style.background="#F79E31";
+            }
+            if(clicks>=25){
+                clickButton.style.background="linear-gradient(45deg,#F79E31,#FF6935)"
+            }
+            if(clicks>=50){
+                clickButton.style.background="linear-gradient(45deg,#FF6935,#FF1800)"
+            }
+            if(msg1!=null){
+                 alert(msg1+ " "+msg2);
+            }
+        }
+        clickButton.addEventListener("click", function(){
+            clicks++;
+            updateDisplay();
+            // Animation sur le clique 
+            clickButton.style.transform="scale(0.95)";
+            setTimeout(function() {
+                clickButton.style.transform="scale(1)";        
+            },100);
+        });
+
+        resetButton.addEventListener("click", function(){
+            clicks=0;
+            updateDisplay("Recommence","enculé");
+            
+        });
+
+        updateDisplay();
+    </script>
+</body>
+</html>

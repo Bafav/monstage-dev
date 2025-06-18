@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>test javascript</title>
+</head>
+<body>
+    <script>
+        // déclaration des variables
+        let pseudo = "bafav";
+        let niveau = 10;
+        let points = 500;
+        let victoires = 70;
+        let parties = 80;
+        // calcul du ratio victoire/parties
+        let ratio = (victoires*100/parties).toFixed(1);
+        let pointParNiveau=Math.round(points/niveau);
+        // afficher dans la console
+        console.log( "===== STATISTIQUES GAMING" );
+        console.log( "PSEUDO : "+ pseudo );
+        console.log( "NIVEAU : "+ niveau );
+        console.log( "POINTS : "+ points );
+        console.log( "VICTOIRES : "+ victoires + " sur "+ parties );
+        console.log( "RATIO DE VICTOIRE : "+ ratio );
+        console.log( "POINTS PAR NIVEAU : "+ pointParNiveau );
+        // caulcul du rang 
+        let rang;
+        if(niveau<5 ){
+            rang="Débutant";
+
+        }else if(niveau<10){
+            rang="Intermédiaire";
+
+        }else if(niveau<20){
+            rang="avancé";
+
+        }else{
+            rang="Master";
+
+        }
+        console.log("RANG : "+ rang);
+        // message perso
+        if(ratio>=70){
+            console.log("Exelent ratio tu domines les autres joueurs !!");
+        } else if(ratio>=50){
+            console.log("Bon ratio continu comme ca !! ");
+        }
+        else{
+            console.log("Bien joué tu vas progresser essaye de faire mieux la prochaine fois. ")
+        }
+
+    </script>
+    <h1>Bonjour le monde !</h1>
+    <p>test javascript dans la console</p>
+</body>
+</html>
+<!-- 
+
+
+
+Consignes :
+
+    Crée des variables pour : pseudo, niveau, points, victoires
+    Calcule le ratio victoires/parties
+    Affiche un message de rang selon le niveau
+    Utilise console.log() pour afficher les résultats
+    Ouvre la console du navigateur (F12) pour voir les résultats
+
+
+let pseudo = "GameMaster";
+let age = 15;
+let estEnLigne = true;
+
+// Constantes
+const maxJoueurs = 10;
+const PI = 3.14159;
+
+
+    String - Texte : "Bonjour"
+    Number - Nombre : 42, 3.14
+    Boolean - Vrai/Faux : true, false
+    Array - Liste : [1, 2, 3]
+    Object - Objet : {nom: "Alex"} -->
